@@ -1,0 +1,185 @@
+:root {
+  --font-size-xsmall: 0.75rem;
+  --font-size-small: 0.875rem;
+  --font-size-normal: 1rem;
+  --font-size-medium: 1.125rem;
+  --font-size-large: 1.25rem;
+  --font-size-header-2: 2rem;
+  --font-size-header-1: 2.5rem;
+
+  --font-weight-normal: 400;
+  --font-weight-bold: 600;
+  --font-weight-bolder: 700;
+
+  --spacing-xxsmall: 0.5rem;
+  --spacing-xsmall: 0.75rem;
+  --spacing-small: 1rem;
+  --spacing-normal: 1.5rem;
+  --spacing-large: 2rem;
+  --spacing-xlarge: 2.5rem;
+  --spacing-xxlarge: 4rem;
+  --max-width: 45rem;
+
+  --padding-normal: var(--spacing-normal);
+  --padding-bottom-xsmall: var(--spacing-small);
+  --padding-bottom-normal: var(--spacing-normal);
+  --padding-left-small: var(--spacing-small);
+  --padding-left-large: var(--spacing-large);
+
+  --margin-bottom-normal: var(--spacing-normal);
+  --margin-bottom-small: var(--spacing-small);
+  --margin-bottom-xsmall: var(--spacing-xsmall);
+  --margin-bottom-xxsmall: var(--spacing-xxsmall);
+  --margin-left-normal: var(--spacing-large);
+
+  --border-radius-small: 0.75rem;
+  --border-radius-normal: 1rem;
+  --border-radius-large: 1.5rem;
+
+  --color-white: hsl(0, 0%, 100%);
+  --color-rose50: hsl(330, 100%, 98%);
+  --color-stone100: hsl(30, 54%, 90%);
+  --color-stone150: hsl(30, 18%, 87%);
+  --color-stone600: hsl(30, 10%, 34%);
+  --color-rose800: hsl(332, 51%, 32%);
+  --color-brown800: hsl(14, 45%, 36%);
+  --color-stone900: hsl(24, 5%, 18%);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ------ ELEMENT STYLES ------ */
+
+body {
+  font-size: var(--font-size-normal);
+  font-family: Outfit, sans-serif;
+  background-color: var(--color-stone100);
+  color: var(--color-stone600);
+}
+
+h1,
+h2 {
+  font-family: "Young Serif", sans-serif;
+}
+
+li span {
+  font-weight: var(--font-weight-bolder);
+}
+
+li {
+  padding-left: var(--padding-left-small);
+}
+
+/* ------ CLASS STYLES ------ */
+
+.container {
+  margin: var(--spacing-xxlarge) auto;
+  max-width: var(--max-width);
+
+  background-color: var(--color-white);
+  border-radius: var(--border-radius-large);
+  box-shadow: 0 var(--spacing-xsmall) var(--spacing-small) rgba(0, 0, 0, 0.01);
+  overflow: hidden;
+}
+
+.inner-container {
+  margin: var(--spacing-xlarge);
+}
+
+.recipe-img {
+  width: 100%;
+  border-radius: var(--border-radius-normal);
+  margin-bottom: var(--margin-bottom-normal);
+}
+
+.header-text {
+  margin-bottom: var(--margin-bottom-small);
+}
+
+.preparation-time {
+  background-color: var(--color-rose50);
+  padding: var(--padding-normal);
+  border-radius: var(--border-radius-small);
+  margin-bottom: var(--margin-bottom-small);
+}
+
+.ingredients-container,
+.instructions-container {
+  border-bottom: 1px solid var(--color-stone150);
+  padding-bottom: var(--padding-bottom-normal);
+  margin-bottom: var(--margin-bottom-normal);
+}
+
+.preparation-time-list,
+.ingredients-list,
+.instructions-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xsmall);
+  transform: translateX(var(--spacing-small));
+}
+
+.preparation-time-list li::marker,
+.ingredients-list li::marker {
+  color: var(--color-rose800);
+  font-size: var(--font-size-xsmall);
+}
+
+.instructions-list li::marker {
+  color: var(--color-brown800);
+  font-size: var(--font-size-normal);
+  font-weight: var(--font-weight-bolder);
+}
+
+.nutrition-text {
+  margin-bottom: var(--margin-bottom-small);
+}
+
+.nutrition-table {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: var(--spacing-small);
+}
+
+.nutrition-table p {
+  padding-bottom: var(--padding-bottom-xsmall);
+  padding-left: var(--padding-left-large);
+  border-bottom: 1px solid var(--color-stone150);
+}
+
+.nutrition-table span {
+  color: var(--color-rose800);
+  font-weight: var(--font-weight-bold);
+  border-bottom: 1px solid var(--color-stone150);
+}
+
+.nutrition-table > p:nth-child(7),
+.nutrition-table > span:nth-child(8) {
+  border-bottom: none;
+}
+
+/* ------ GENERAL STYLES ------ */
+.header--1 {
+  font-size: var(--font-size-header-1);
+  font-weight: var(--font-weight-normal);
+  margin-bottom: var(--margin-bottom-xsmall);
+  color: var(--color-stone900);
+}
+
+.header--2 {
+  font-size: var(--font-size-header-2);
+  margin-bottom: var(--margin-bottom-xsmall);
+  color: var(--color-brown800);
+  font-weight: var(--font-weight-normal);
+}
+
+.header--3 {
+  margin-bottom: var(--margin-bottom-xsmall);
+  color: var(--color-rose800);
+}
